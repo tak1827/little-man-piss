@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1, minimum-scale=1, width=device-width" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <script type="text/javascript" charset="utf-8" src="js/jquery-2.0.3.min.js"></script>
+        <script type="text/javascript" src="js/Little_man_piss.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+        <link rel="apple-touch-icon-precomposed" href="iphone@2x.png">
+        <title>生き延びろ！小便小僧から</title>
+    </head>
+    <body>
+        <!--                         トップページ                          -->
+        <div id="top" class="panel active">
+            <img src="img/titlepage.png">
+            <div alt="tutorial" class="abtn tutorial"><h1>Tutorial</h1></div>
+            <div alt="record" class="abtn record"><h1>Record</h1></div>
+            <div alt="game" class="abtn start"><h1>Play</h1></div>
+        </div>
+        <!--                         チュートリアル                          -->
+        <div id="tutorial" class="panel">
+            <div id="tuto_role">
+                <div class="images">
+                    <img class="pic" src="img/tutorial1.png">
+                    <img class="pic num2" src="img/tutorial2.png">
+                    <img class="pic num3" src="img/tutorial3.png">
+                </div>
+                <div class="footer">
+                    <div class="dot_holder">
+                        <div class="dot_holder2">
+                            <div class="dot">&nbsp;</div>
+                            <div class="dot">&nbsp;</div>
+                            <div class="dot">&nbsp;</div>
+                        </div>
+                    </div>
+                    <div class="slide prev">&nbsp;</div>
+                    <div class="slide next">&nbsp;</div>
+                </div>
+            </div>
+            <div alt="top" class="abtn back"><h1>Back</h1></div>
+        </div>
+        <!--                         ゲーム画面                          -->
+        <div id="game" class="panel">
+            <canvas id='myCanvas2' width='640' height='290'>
+            </canvas>
+            <canvas id='myCanvas' width='640' height='839'>
+            </canvas>
+            <img id="arrow_right" src="img/arrow.png">
+            <img id="arrow_left" src="img/arrow.png">
+            <div id="walkman" ></div>
+            <div id="poop" ></div>
+            <div id="rapoop" ></div>
+            <div id="over" ><div id="overflow"><img src="img/overflow.png"></div></div>
+            <div class="touch"><h1>Touch</h1></div>
+            <!--タイマー-->
+            <div class="timer first"></div>
+            <div class="timer second"></div>
+            <div class="timer third"></div>
+            <div class="timer forth"></div>
+            <img class="black" src="img/black.png">
+            <img class="soul" src="img/soul.png">
+            <img class="ring" src="img/ring.png">
+            <img class="gameoverLetter" src="img/gameover.png">
+            <img class="clearangel" src="img/clearangel.png">
+            <img class="clearLetter" src="img/clear.png">
+            <div alt="top" class="return"><h1>Back</h1></div>
+            <div id="leftTime"></div>
+        </div>
+        <!--                         記録ページ                          -->
+        <div id="record" class="panel">
+            <div id="now" class="score now blinking"><h1></h1></div>
+            <div class="rank">
+                <div class="score"><h1></h1></div>
+                <div class="score"><h1></h1></div>
+                <div class="score"><h1></h1></div>
+                <div class="score"><h1></h1></div>
+                <div class="score"><h1></h1></div>
+            </div>
+            <div alt="game" class="abtn retry"><h3>Play</h3></div>
+            <div alt="top" class="abtn title"><h3>Title</h3></div>
+            <div alt="apps" class="abtn apps"><h3>Apps</h3></div>
+        </div>
+    </body>
+</html>
