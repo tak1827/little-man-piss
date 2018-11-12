@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="jp.co.headwaters.littlemanpiss"
+    android:installLocation="preferExternal"
+    android:versionCode="3"
+    android:versionName="2.1" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <!-- appC 設置開始 -->
+        <meta-data
+            android:name="appc_media_key"
+            android:value="3459105632a1410143ad0e1779d4ac8c1735e1e0" />
+
+        <activity
+            android:name="jp.co.cayto.appc.sdk.android.AppCAgreementActivity"
+            android:noHistory="true"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="jp.co.cayto.appc.sdk.android.AppCWebActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|uiMode|touchscreen"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+
+        <receiver android:name="jp.co.cayto.appc.sdk.android.background.BgAppReceiver" >
+            <intent-filter>
+                <action android:name="jp.co.cayto.appc.sdk.android.remote.command.gid.search" />
+                <action android:name="jp.co.cayto.appc.sdk.android.remote.command.gid.set" />
+                <action android:name="jp.co.cayto.appc.sdk.android.remote.command.gid.remove" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="jp.co.cayto.appc.sdk.android.background.IDService" />
+
+        <receiver
+            android:name="jp.co.cayto.appc.sdk.android.background.BootStrap"
+            android:enabled="true"
+            android:exported="false"
+            android:label="BootStrap" >
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED" />
+                <action android:name="android.intent.action.PACKAGE_REMOVED" />
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <data android:scheme="package" >
+                </data>
+            </intent-filter>
+        </receiver>
+        <!-- AppC Core Setting End -->
+
+        <activity
+            android:name="jp.co.headwaters.littlemanpiss.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

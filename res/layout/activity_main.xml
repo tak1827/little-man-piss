@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/adLayoutCutin"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <jp.co.cayto.appc.sdk.android.AppCMarqueeView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            appc_text_color="red" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" />
+
+        <jp.co.cayto.appc.sdk.android.AppCSimpleView
+            android:id="@+id/adLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            appc_skin_ccolor="#FF0000"
+            appc_text_color="magenta" /> 
+            
+    </LinearLayout>
+</FrameLayout>
